@@ -1,5 +1,5 @@
 /****************************************************************
- * Copyright (C) 2016, Yagro, all right reserved.
+ * Copyright (C) 2016, XinLi, all right reserved.
  * File name:    L9352B.c
  * Date:         2016.08.31
  * Description:  L9352B driver.
@@ -200,8 +200,6 @@ static void L9352B_IN_Init(void)
 *****************************************************************/
 static void L9352B_IN3_SetPwm(float DutyCycle)
 {
-  uint16_t compare = 0;
-  
   if(DutyCycle > 100.0f)
   {
     DutyCycle = 100.0f;
@@ -211,7 +209,7 @@ static void L9352B_IN3_SetPwm(float DutyCycle)
     DutyCycle = 0.0f;
   }
   
-  compare = (uint16_t)((float)(L9352B_IN_TIM_Period + 1) * DutyCycle * 0.01f);
+  uint16_t compare = (uint16_t)((float)(L9352B_IN_TIM_Period + 1) * DutyCycle * 0.01f);
   
   L9352B_IN3_TIM_SetCompare(L9352B_IN_TIM, compare);
 }
@@ -225,8 +223,6 @@ static void L9352B_IN3_SetPwm(float DutyCycle)
 *****************************************************************/
 static void L9352B_IN4_SetPwm(float DutyCycle)
 {
-  uint16_t compare = 0;
-  
   if(DutyCycle > 100.0f)
   {
     DutyCycle = 100.0f;
@@ -236,7 +232,7 @@ static void L9352B_IN4_SetPwm(float DutyCycle)
     DutyCycle = 0.0f;
   }
   
-  compare = (uint16_t)((float)(L9352B_IN_TIM_Period + 1) * DutyCycle * 0.01f);
+  uint16_t compare = (uint16_t)((float)(L9352B_IN_TIM_Period + 1) * DutyCycle * 0.01f);
   
   L9352B_IN4_TIM_SetCompare(L9352B_IN_TIM, compare);
 }

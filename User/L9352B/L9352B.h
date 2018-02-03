@@ -1,5 +1,5 @@
 /****************************************************************
- * Copyright (C) 2016, Yagro, all right reserved.
+ * Copyright (C) 2016, XinLi, all right reserved.
  * File name:    L9352B.h
  * Date:         2016.08.31
  * Description:  L9352B driver.
@@ -100,6 +100,7 @@
 *****************************************************************/
 void L9352B_Init(float frequency, float amplitude);
 void L9352B_DeInit(void);
+
 void L9352B_SetDither(float frequency, float amplitude);
 void L9352B_SetCurrent(float ch1, float ch2);
 
